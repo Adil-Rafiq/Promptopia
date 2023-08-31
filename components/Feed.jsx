@@ -5,7 +5,7 @@ import PromptCard from "@components/PromptCard";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   // if (!data.length) return <div>No post found!</div>;
-  if (!data.length) console.assert("no posts!");
+  if (!data.length) console.log("no posts!");
 
   return (
     <div className="mt-16 prompt_layout">
@@ -31,6 +31,7 @@ const Feed = () => {
       const data = await reponse.json();
       setAllPosts(data);
       setFilteredPosts(data);
+      console.log("Data", data);
     };
 
     fetchPosts();
