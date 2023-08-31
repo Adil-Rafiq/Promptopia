@@ -26,6 +26,7 @@ const Feed = () => {
   const [filteredPosts, setFilteredPosts] = useState([]);
 
   const fetchPosts = async () => {
+    console.log("getting data");
     const response = await fetch("/api/prompt");
     const data = await response.json();
 

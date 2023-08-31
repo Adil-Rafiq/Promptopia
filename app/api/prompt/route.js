@@ -1,6 +1,8 @@
 import { connectToDB } from "@utils/database";
 import Prompt from "@models/prompt";
 
+console.log("Inside Route.js");
+
 export const GET = async (reqest) => {
   console.log("Sending all posts");
   try {
