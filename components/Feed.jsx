@@ -5,7 +5,7 @@ import PromptCard from "@components/PromptCard";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   // if (!data.length) return <div>No post found!</div>;
-  if (!data.length) alert("no posts!");
+  if (!data.length) console.assert("no posts!");
 
   return (
     <div className="mt-16 prompt_layout">
