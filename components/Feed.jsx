@@ -26,15 +26,17 @@ const Feed = () => {
   const [filteredPosts, setFilteredPosts] = useState([]);
 
   const fetchPosts = async () => {
-    const response = await fetch("app/api/prompt");
+    const response = await fetch("/api/prompt");
     const data = await response.json();
 
+    console.log("data:", data);
     setAllPosts(data);
   };
 
   useEffect(() => {
+    console.log("Calling fetchPosts");
     fetchPosts();
-  }, []);
+  }, [filteredPosts]);
 
   const handleSearchChange = (e) => {
     const input_text = e.target.value;
