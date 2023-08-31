@@ -25,17 +25,15 @@ const Feed = () => {
   const [allPosts, setAllPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const reponse = await fetch("/api/prompt");
-      const data = await reponse.json();
-      setAllPosts(data);
-      setFilteredPosts(data);
-      console.log("Data", data);
-    };
+  const fetchPosts = async () => {
+    const response = await fetch("/api/prompt");
+    const data = await response.json();
 
+    setAllPosts(data);
+  };
+
+  useEffect(() => {
     fetchPosts();
-    console.log("Use Effect run");
   }, []);
 
   const handleSearchChange = (e) => {
