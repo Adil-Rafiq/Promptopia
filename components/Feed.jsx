@@ -25,8 +25,6 @@ const Feed = () => {
   const [allPosts, setAllPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
 
-  alert("Displaying Feed:", allPosts);
-
   useEffect(() => {
     const fetchPosts = async () => {
       const reponse = await fetch("/api/prompt");
