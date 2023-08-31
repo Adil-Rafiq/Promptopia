@@ -4,8 +4,6 @@ import Prompt from "@models/prompt";
 console.log("Inside Route.js");
 
 export const GET = async (req, res) => {
-  res.setHeader("Cache-Control", "no-cache");
-
   console.log("Sending all posts");
   try {
     await connectToDB();
