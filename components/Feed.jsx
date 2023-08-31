@@ -24,13 +24,15 @@ const Feed = () => {
   const [allPosts, setAllPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
 
+  alert("Displaying Feed:", allPosts);
+
   useEffect(() => {
     const fetchPosts = async () => {
       const reponse = await fetch("/api/prompt");
       const data = await reponse.json();
       setAllPosts(data);
       setFilteredPosts(data);
-      console.log("Inside UseEffect data:", data);
+      alert("Inside UseEffect data:", data);
     };
 
     fetchPosts();
