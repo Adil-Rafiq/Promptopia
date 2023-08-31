@@ -33,7 +33,7 @@ const Feed = () => {
 
   useEffect(() => {
     fetchPosts();
-  }, [filteredPosts]);
+  }, []);
 
   const handleSearchChange = (e) => {
     const input_text = e.target.value;
