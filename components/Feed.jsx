@@ -35,6 +35,7 @@ const Feed = () => {
     };
 
     fetchPosts();
+    console.log("Use Effect run");
   }, []);
 
   const handleSearchChange = (e) => {
