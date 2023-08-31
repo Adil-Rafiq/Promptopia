@@ -28,7 +28,10 @@ const Feed = () => {
   const fetchPosts = async () => {
     console.log("getting data");
     try {
-      const response = await fetch("/api/prompt");
+      const response = await fetch(
+        `/api/prompt?timestamp=${new Date().getTime()}`
+      );
+
       const data = await response.json();
 
       console.log("data:", data);
