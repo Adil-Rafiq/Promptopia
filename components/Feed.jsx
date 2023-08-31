@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import PromptCard from "@components/PromptCard";
 
 const PromptCardList = ({ data, handleTagClick }) => {
-  // if (!data.length) return <div>No post found!</div>;
+  if (!data.length) return <div>No post found!</div>;
 
   return (
     <div className="mt-16 prompt_layout">
@@ -30,6 +30,7 @@ const Feed = () => {
       const data = await reponse.json();
       setAllPosts(data);
       setFilteredPosts(data);
+      console.log("Inside UseEffect data:", data);
     };
 
     fetchPosts();
